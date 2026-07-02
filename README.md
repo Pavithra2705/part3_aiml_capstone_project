@@ -187,11 +187,8 @@ The best pipeline was saved as **best_model.pkl** using **joblib.dump**. The sav
 
 **Recommendation**
 
-Based on the overall results, **Gradient Boosting** is the best model to deploy. It achieved the highest test-set AUC (**0.9776**), showing that it performs the best at distinguishing between high-demand and low-demand rental days.
-
-Although Random Forest achieved a slightly higher average cross-validation AUC, Gradient Boosting performed better on the final test set, which better represents real-world performance. Its standard deviation is also reasonably low, indicating stable performance across different data splits.
-
-Another advantage is that Gradient Boosting is efficient to retrain and is well suited for production environments.
+Although Gradient Boosting achieved the highest single test-set AUC (0.9776), the serialized model (best_model.pkl) is the tuned Random Forest pipeline obtained through GridSearchCV, as required by the assignment.
+The tuned Random Forest achieved the highest cross-validation performance among the tuned Random Forest configurations and provides a reproducible preprocessing and modelling pipeline.
 
 ---
 
